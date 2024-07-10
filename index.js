@@ -8,11 +8,11 @@ const path = require('path');
 const app = express();
 const port = 2305;
 const bodyParser = require('body-parser');
-// const methodOverride = require('method-override');
+const methodOverride = require('method-override');
 
 app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(methodOverride('_method'));
+app.use(methodOverride('_method'));
 
 //
 >>>>>>> 215a93c (10/7)
