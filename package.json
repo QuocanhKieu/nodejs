@@ -12,6 +12,10 @@
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.19.2",
+<<<<<<< HEAD
+=======
+    "method-override": "^3.0.0",
+>>>>>>> 215a93c (10/7)
     "mongoose": "^8.4.4"
   }
 }
