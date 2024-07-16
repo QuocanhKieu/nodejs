@@ -1,8 +1,16 @@
 const express = require("express");
+const session = require('express-session');
 const bodyParser = require('body-parser');
 const app = express();
 const port = 2305;
 
+
+app.use(session({
+    secret: 't2305msecretKey123456', // Replace with a secure key
+    resave: true,
+    saveUninitialized: true,
+    cookie: { secure: false } // Set to true if using HTTPS(when actually deployed)
+}));
 app.use(bodyParser.urlencoded({ extended: true }));
 // set static
 app.use(express.static("public"));

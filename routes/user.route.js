@@ -3,6 +3,9 @@ const User = require("./../model/user.model");
 
 const router = express.Router();
 const controller = require("./../controller/user.controller");
+
+
+
 router.get("/register", controller.register);
 router.post("/register", controller.postRegister);
 // Render the password reset request form
@@ -65,6 +68,39 @@ router.post("/reset/:token", async (req, res) => {
   } catch (err) {
     res.status(500).send("An error occurred. Please try again.");
   }
+});
+
+  router.get('/login', (req, res) => {
+    console.log("get here");  
+    res.render('user/login', { errors: null });
+  });
+
+  router.post('/login', async (req, res) => {
+    const { username, password } = req.body;
+    
+    try {
+        const user = await User.findOne({ username });
+        
+        if (!user) {
+            return res.render('user/login', { errors: 'Invalid username or password' });
+        }
+        
+        const match = await bcrypt.compare(password, user.password);
+        
+        if (!match) {
+            return res.render('user/login', { errors: 'Invalid username or password' });
+        }
+        
+        // Set session and redirect to a protected route (e.g., dashboard)
+        req.session.user = { username: user.username,
+          email: user.email,
+          role: user.role,
+
+        };
+        res.redirect('/user/dashboard');
+    } catch (error) {
+        res.status(500).send('An error occurred. Please try again.');
+    }
 });
 
 module.exports = router;

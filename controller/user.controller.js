@@ -3,6 +3,8 @@ const bcrypt = require("bcryptjs");
 const mail = require("./../mail/mail");
 const crypto = require("crypto");
 
+
+
 exports.register = (req, res) => {
   res.render("user/register");
 };
