@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "668cb9124fbe35ff3d46d88a"
+  },
+  "name": "mmmmm",
+  "email": "sgshagada@gmail.com",
+  "dob": {
+    "$date": "2024-02-12T00:00:00.000Z"
+  },
+  "mark": 2,
+  "__v": 0,
+  "classroom": {
+    "$oid": "668d45350643cadb255af20e"
+  },
+  "subjects": [
+    {
+      "$oid": "668ff119d3362a3ae3fd6155"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "668f5e9dccee47915383a343"
+  },
+  "name": "E-Zone",
+  "email": "hjdhjdf@gmail.com",
+  "dob": {
+    "$date": "2024-06-30T00:00:00.000Z"
+  },
+  "mark": 2,
+  "classroom": {
+    "$oid": "668d452b0643cadb255af20c"
+  },
+  "__v": 0,
+  "subjects": [
+    {
+      "$oid": "66909f33d56099e03b390df3"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6690a048d56099e03b390e20"
+  },
+  "name": "Kim Quang Minh",
+  "email": "quangminhkim3009@gmail.com",
+  "dob": {
+    "$date": "2024-07-01T00:00:00.000Z"
+  },
+  "mark": 2,
+  "classroom": {
+    "$oid": "668d452b0643cadb255af20c"
+  },
+  "subjects": [
+    {
+      "$oid": "668ff119d3362a3ae3fd6155"
+    }
+  ],
+  "__v": 0
+}]

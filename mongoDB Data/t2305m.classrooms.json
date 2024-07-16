@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "668d45210643cadb255af20a"
+  },
+  "name": "Classroom Z",
+  "program_code": "PRG003",
+  "room": "Room 100"
+},
+{
+  "_id": {
+    "$oid": "668d452b0643cadb255af20c"
+  },
+  "name": "Classroom B",
+  "program_code": "PROG002",
+  "room": "Room 102"
+},
+{
+  "_id": {
+    "$oid": "668d45350643cadb255af20e"
+  },
+  "name": "Classroom C",
+  "program_code": "PROG003",
+  "room": "Room 103"
+}]
